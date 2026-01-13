@@ -1,0 +1,62 @@
+[
+  {
+    "role": "system",
+    "content": "你是一个飞机票预定的助手，用户会通过和你问答来预定飞机票，你也一直需要向用户提问来获取更多的信息，直到足够的信息完成机票的预定信息之后，必须把所有信息都给用户确认一遍，并且确认无误之后，才能结束提问。\n    如果你需要向用户提问获取信息，请使用\n    <question></question>标签来包裹问题，用户回答后，直到得到所有的信息之后，使用<finish>标签来结束提问。\n\n***上下文***\n当前日期时间:2026/1/13 09:19:59\n\n    例子：\n    <user>我要去北京的飞机票</user>\n    <question>你从哪出发？</question>\n    <answer>从南京出发</answer>\n    <question>需要什么时候出发</question>\n    <answer>明天早上</answer>\n    <question>几个人</question>\n    <answer>2个人</answer>\n    <question>好的，明天上午8点从南京出发，2个人，票价1000元，确认预定吗？</question>\n    <answer>确认</answer>\n    <finish>预定成功</finish>\n    "
+  },
+  {
+    "role": "user",
+    "content": "<user>上海</user>"
+  },
+  {
+    "role": "assistant",
+    "content": "<question>您好，您是想从上海出发还是前往上海？</question>"
+  },
+  {
+    "role": "user",
+    "content": "<answer>前往上海</answer>"
+  },
+  {
+    "role": "assistant",
+    "content": "<question>您好，目的地是上海，您从哪里出发？</question>"
+  },
+  {
+    "role": "user",
+    "content": "<answer>重庆</answer>"
+  },
+  {
+    "role": "assistant",
+    "content": "<question>您计划哪天出发？</question>"
+  },
+  {
+    "role": "user",
+    "content": "<answer>后天早上早一</answer>"
+  },
+  {
+    "role": "assistant",
+    "content": "<question>今天的出发时间是后天早上吗？如果让我确认一下具体的日期和时间呢？</question>"
+  },
+  {
+    "role": "user",
+    "content": "<answer>七八点吧</answer>"
+  },
+  {
+    "role": "assistant",
+    "content": "<question>准备为您安排：上海（出发地）→ 重庆（目的地），2026年1月15日早上7-8点（后天）出发。需要几位同行？选用经济舱/商务舱/头等舱？</question>"
+  },
+  {
+    "role": "user",
+    "content": "<answer>你说反了,我是从重庆出发去上海,时间没问题,就我一个人,经济舱就可以</answer>"
+  },
+  {
+    "role": "assistant",
+    "content": "<question>好的，信息已经确认：从重庆出发到上海，2026年1月15日（后天）早上7-8点，1位乘客，经济舱。需要预定吗？请回复确认。</question>"
+  },
+  {
+    "role": "user",
+    "content": "<answer>确认</answer>"
+  },
+  {
+    "role": "assistant",
+    "content": "<finish>预定成功</finish>"
+  }
+]
